@@ -9,6 +9,7 @@ if (window.addEventListener){window.addEventListener('load',startr,false)}// W3C
 else if (window.attachEvent){window.attachEvent('onload',startr)}// Microsoft
 //
 var chimes = 'https://static.olark.com/jsclient/sounds/olark-chimes.ogg'
+var audio4 = 'https://cdn.jsdelivr.net/gh/kwafelt/web@co/src/audio/Alarm_Beep_02.ogg'
 //
 let msg; let pos = 0; let scrollMSG = function(raw){
  msg = raw; document.title = msg.substring(pos,msg.length) + msg.substring(0,pos);
@@ -21,7 +22,7 @@ let $EL = function(c,e){ return (c == 'cre' ? document.createElement(e) : c == '
 //
 let permissions = function(state){// state : 'granted' || 'prompt' || 'denied'
  let txt; txt = state == 'granted' ? 'Access Granted' : 'Access Denied'; let sid; sid = state == 'granted' ? 'gran' : 'deni';
- let ogg = new Audio(); ogg.src = './web/audio/Alarm_Beep_02.ogg'; ogg.preload = 'metadata'; ogg.oncanplay = ogg.play();
+ let ogg = new Audio(); ogg.src = audio4; ogg.preload = 'metadata'; ogg.oncanplay = ogg.play();
  let prm = $EL('cre','p'); prm.className = 'prm'; prm.setAttribute('id', sid);
  prm.textContent = txt; document.body.appendChild(prm); setTimeout(function(){removeElement(prm.id)},1000)
 }; let removeElement = function(DELete){let DEL = $EL('get',DELete); DEL.remove();}// P A U S E : result
