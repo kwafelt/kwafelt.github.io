@@ -145,4 +145,5 @@ let projection = function(){
  } else {// exit full-screen
   if (document.exitFullscreen){document.exitFullscreen()}
   else if (document.webkitExitFullscreen){document.webkitExitFullscreen()}
-}}// kemaskini 20 sept 2022
+}};
+// kemaskini 20 sept 2022
