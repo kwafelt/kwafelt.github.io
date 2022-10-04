@@ -1,5 +1,5 @@
 /* writ.er.ws / kwafelt / written by.. */
-/*@font-face {font-family:"archive";src:url("./font/archive/archive.otf") format("opentype");font-weight:normal;font-style:normal;}*/
+@font-face {font-family:"archive";src:url("./font/archive/Archive.otf") format("opentype");font-weight:normal;font-style:normal;}
 /* selector{property:value} && css1 font(in order):font-style font-variant font-weight font-size/line-height font-family; */
 @media (display-mode: fullscreen){.c *:not(.none){-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
 } @media (display-mode: standalone){}
