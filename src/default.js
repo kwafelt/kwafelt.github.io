@@ -1,14 +1,12 @@
-// Hanna Sofea's workstations / writ.er.ws / kwafelt was here..
+// Hanna Sofea's comrade / workstations: writ.er.ws / written by kwafelt / 20221005.
 with (window){oncontextmenu = function(){permissions('denied'); return false}; onselectstart = function(){return false}; ondragstart = function(){return false}; onmousedown = function(){return true}; ondblclick = function(){return false}};
 window.status = 'static-site'; let txt = ' ~ writ.er.ws / kwafelt was here';
 //
 let origin = self.location.origin; let protocol = self.location.protocol; let hostnm = self.location.hostname; let pathnm = self.location.pathname;
-let startr = function(){console.log(hostnm + pathnm + '?reload=success'); self.setTimeout(function(){istart(0)},500);};
+let startr = function(){console.log(hostnm + pathnm + '?reload=success'); self.setTimeout(function(){istart(0)},250);}; document.title = '\u200E';
 //
-if (window.addEventListener){window.addEventListener('load',startr,false)}// W3C standard
+if (window.addEventListener){window.addEventListener('DOMContentLoaded',startr,false)}// W3C standard
 else if (window.attachEvent){window.attachEvent('onload',startr)}// Microsoft
-//
-// document.addEventListener("load", FUNCTION);
 //
 var chimes = 'https://static.olark.com/jsclient/sounds/olark-chimes.ogg'
 var beep = './src/audio/Alarm_Beep_02.ogg';
@@ -20,7 +18,7 @@ let msg; let pos = 0; let scrollMSG = function(raw){
 //
 // self.setTimeout(function(){scrollMSG(txt)},500);
 //
-let $EL = function(c,e){ return (c == 'cre' ? document.createElement(e) : c == 'get' ? document.getElementById(e) : c == 'tag' ? document.getElementsByTagName(e) : c == 'que' ? document.querySelectorAll(e) : alert(c + e))};
+let $EL = function(c,e){ return (c == 'cre' ? document.createElement(e) : c == 'get' ? document.getElementById(e) : c == 'tag' ? document.getElementsByTagName(e) : c == 'que' ? document.querySelectorAll(e) : alert(c + e))};//The getElementsByClassName()
 //
 let permissions = function(state){// state : 'granted' || 'prompt' || 'denied'
  let txt; txt = state == 'granted' ? 'Access Granted' : 'Access Denied'; let sid; sid = state == 'granted' ? 'gran' : 'deni';
@@ -30,7 +28,7 @@ let permissions = function(state){// state : 'granted' || 'prompt' || 'denied'
 }; let removeElement = function(DELete){let DEL = $EL('get',DELete); DEL.remove();}// P A U S E : result
 //
 let istart = function(init){
- let tx = ['please prove that you are human','<a class="button" data-cli="human">OK</a><a class="button" data-cli="robot">&times</a>'];
+ let tx = ['PLEASE PROVE THAT YOU ARE HUMAN','<a class="button" data-cli="human">OK</a><a class="button" data-cli="robot">&times</a>'];
  let mn = $EL('tag','main')[0]; let sc = $EL('cre','section'); sc.className = 'land cgrid';
  let p1 = $EL('cre','p'); p1.className = 'land'; p1.textContent = tx[0];
  let p2 = $EL('cre','p'); p2.className = 'form'; p2.innerHTML = tx[1];
@@ -101,4 +99,4 @@ let projection = function(){
   if (document.exitFullscreen){document.exitFullscreen()}
   else if (document.webkitExitFullscreen){document.webkitExitFullscreen()}
   };
-};// kemaskini 20 sept 2022
+};// kemaskini 05 oct 2022
