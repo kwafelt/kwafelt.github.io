@@ -49,7 +49,7 @@ let webapps = function(num){
     </article>
     `
     const sec = $EL('cre','section'); sec.className = 'panel_grid'; sec.innerHTML = honeyp;
-    let m4a = new Audio(); m4a.src = `./src/audio/petualang.mp3?cache=true`;
+    let m4a = new Audio(); m4a.src = `./src/audio/Botingkek.m4a?cache=true`;
     m4a.preload = 'metadata'; m4a.oncanplay = m4a.play();
     $EL('tag','main')[0].appendChild(sec);
   };
