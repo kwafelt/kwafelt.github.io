@@ -1,24 +1,45 @@
 //
+let check0 = function(txt1){
+  const t1 = txt1.split(``); let r1 = 0; for (let i1 in t1){
+    r2 = t1[i1].codePointAt(0); r3 = Number(r2); r1 = r1 + r3;
+  }; return r1
+}
+let checkr = function(txt1,txt2){
+  let x = check0(txt1); let y = check0(txt2); let z = `${x}:${y}`
+  if(library.indexOf(`${z}`) !== -1){ss = z; c4 = verify(x,y);} else {ss = `0:0`;}
+  return ss
+}
+let staff = function(init){
+  if (init == 0){
+    prompt(`ada combolist ? link github-repository untuk decrypt:`,`${repo}`);
+  }
+  if (init == 1){
+    let usern = $EL(`get`,`usern`); let passw = $EL(`get`,`passw`);
+    let staff = checkr(usern.value,passw.value); switch (staff){
+      case `690:699`:
+      let writ = RESETR(kill); msg = `beware: honeypot everywhere`;
+      break; case `0:0`:
+      permissions(`blue`); usern.value = ``; passw.value = ``; usern.focus();
+      break; default:
+      alert(`status ID: selamat, tiada kompromi.\r\nsila periksa ID yang lain.\r\nTry another..`);
+      usern.value = ``; passw.value = ``; usern.focus();}
+    }
+}
 let rwdata = function(txt, key){
-  if (txt == 0){dat = `./xyzbca/ikan.md`;}
-  st0 = key.toString().substr(key.length-1,2);
+  if (txt == 0){dat = `./xyzbca/landing.md`;}
+  st0 = key.toString().substr(key.length-1,4);
   const xhttp = new XMLHttpRequest(); xhttp.onload = function(){
     var cdata = this.responseText; rdata = cdata.substr(st0);
-    sdata = base64(`dec`,rdata);
-    //
-    const s2 = $EL(`cre`,`section`); s2.className = `ttl`; s2.innerHTML = sdata;
+    sdata = base64(`dec`,rdata); elem = `
+    <code class="pre" id="pre">${sdata}</code>
+    `
+    const s2 = $EL(`cre`,`section`); s2.className = `ttl`; s2.innerHTML = elem;
     $EL(`tag`,`main`)[0].appendChild(s2);
   }; xhttp.open('GET',dat,true); xhttp.send();
 }
-let rwrt02 = function(slc,txt){
-  raw = txt.substr(slc);
-  
-  const s2 = $EL(`cre`,`section`); s2.className = `der`; s2.innerHTML = base64('dec',raw);
-  $EL(`tag`,`main`)[0].appendChild(s2);
-}
 let txtacc = function(init){
   let tinn = $EL(`get`,`code`).value; let num1 = Number(tinn);
-  let num2 = num1.toString(8); calc = `1574125`;
+  let num2 = num1.toString(8); calc = `3543576`;
   if (num2 == calc){
     permissions(`granted`); $EL('tag',`main`)[0].textContent = blurb[0];
     val = (Number(calc) * Number(tinn)); rwdata(init,val);
@@ -27,30 +48,21 @@ let txtacc = function(init){
     $EL(`get`,`code`).focus();
   }
 }
-let webapps = function(num){
- let mn = $EL(`tag`,`main`)[0]; mn.textContent = null;
- switch (num){
-  case 0:
-  //self.document.title = `CAPTURE THE FLAG`
-  elem = `
-  <p class="p1">Enter your authorized 'CTF' access code</p><form action="javascript:txtacc(0);" name="access">
-  <input type="text" id="code" name="code" maxlength="6"><input type="hidden" value="submit"></form>
-  <p class="p1">hint: kod dari thread forum</p>
-  `
-  const s1 = $EL(`cre`,`section`); s1.className = `locked`; s1.innerHTML = elem;
-  $EL(`tag`,`main`)[0].appendChild(s1); $EL(`tag`,`input`)[0].focus();
-  break
-  case 1:
-  alert(`ini untuk apa..?`)
-  break
-  default:
-    honeyp = `
-    <section class="hello"><p class="p0">hnnsfea's comrade</p><p class="p1">Locked out of server / kwafelt was here</p>
-    </article>
-    `
-    const sec = $EL('cre','section'); sec.className = 'panel_grid'; sec.innerHTML = honeyp;
-    let m4a = new Audio(); m4a.src = `./src/audio/Botingkek.m4a?cache=true`;
-    m4a.preload = 'metadata'; m4a.oncanplay = m4a.play();
-    $EL('tag','main')[0].appendChild(sec);
-  };
+let iptonum = function(ipn){
+  var n = ipn.split(`.`); var val = Number(0);
+  val = val + Number(n[0]) * Math.pow(256, 3);
+  val = val + Number(n[1]) * Math.pow(256, 2);
+  val = val + Number(n[2]) * Math.pow(256, 1);
+  val = val + Number(n[3]); return val;
 };
+let numtoip = function(int){
+  let v1 = ((int >> 24) & 255);
+  let v2 = ((int >> 16) & 255);
+  let v3 = ((int >>  8) & 255);
+  let v4 = (int & 255);
+  R = `${v1}.${v2}.${v3}.${v4}`
+  return R;
+}; USAGE = `
+session ID ? tukarkan session ID kepada IP:
+run script: numtoip(sessionID)
+`
