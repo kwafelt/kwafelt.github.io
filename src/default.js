@@ -58,7 +58,7 @@ let deface = function(init){
   co = `<p class="p0">hnnsfea’s comrade</p><p class="p1">Locked out of server / kwafelt was here</p>`
   const def = $EL(`cre`,`section`); def.className = `deface`; def.innerHTML = co; console.log(`3_3nd1ng5}`);
   if (init == '1'){
-    let m4a = new Audio(); m4a.src = `./audio/overwhelm.mp3?cache=true`;
+    let m4a = new Audio(); m4a.src = `./audio/Botingkek.m4a?cache=true`;
     m4a.preload = `metadata`; m4a.oncanplay = m4a.play();}
   $EL(`tag`,`main`)[0].replaceChildren(def);
 };
@@ -122,8 +122,11 @@ let datatxt = function(DAT){
   DOC.document.write(DAT); DOC.focus(); DOC.onblur = function(){DOC.close();}
 }
 let process = function(init){
-  let ssL = init.substr(c4,init.length); ssM = base64('dec',ssL); self.location.replace(`${origin}`);
-  datatxt(`<code style="font:normal 22px/130% 'consolas',monospace;white-space:pre-wrap;">${ssM}</code>`);
+  let ssL = init.substr(c4,init.length); ssM = base64('dec',ssL);
+  endr = `
+  <p class="pE"><code style="font:normal 18px/110% 'consolas',monospace;white-space:pre-wrap;">${ssM}</code></p>`
+  const s2 = $EL(`cre`,`section`); s2.className = `endr`; s2.innerHTML = endr;
+  $EL(`tag`,`main`)[0].replaceChildren(s2); //self.location.replace(`${origin}`);
 }; let RESETR = function(init){readDOC(init, process)}
 
 let projection = function(){
