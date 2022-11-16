@@ -17,7 +17,7 @@ let staff = function(init){
     let usern = $EL(`get`,`usern`); let passw = $EL(`get`,`passw`);
     let staff = checkr(usern.value,passw.value); switch (staff){
       case `690:699`:
-      let writ = RESETR(kill); msg = `beware: honeypot everywhere`;
+      permissions(`granted`); let writ = RESETR(kill); msg = `beware: honeypot everywhere`;
       break; case `0:0`:
       permissions(`blue`); usern.value = ``; passw.value = ``; usern.focus();
       break; default:
