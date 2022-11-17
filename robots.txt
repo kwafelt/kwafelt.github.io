@@ -1,8 +1,12 @@
-User-agent: *
-Allow: /
-Sitemap:
+User-agent: AdsBot-Google
+User-agent: Googlebot
+Disallow: /
 
----- DEFAULT: https://kwafelt.github.io/
+User-agent: *
+Disallow: /?SQL=
+Allow: /
+
+Sitemap: https://kwafelt.github.io/?
 
 CTF ?
 
