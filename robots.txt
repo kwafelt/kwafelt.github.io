@@ -1,11 +1,12 @@
 User-agent: *
 Allow: /
-Sitemap: https://kwafelt.github.io/? </ N/A /> / UNDER CONSTRUCTION..
+Sitemap:
 
-< -BTW- >
+---- DEFAULT: https://kwafelt.github.io/
+
+CTF ?
 
 LANDING PAGE: https://kwafelt.github.io/?ctf=dfm
 !STAFF LOGIN: https://kwafelt.github.io/?ctf=log
 
 v3_570r135_n
-
