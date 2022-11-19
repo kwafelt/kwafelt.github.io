@@ -42,16 +42,16 @@ a.c:hover,a.c img:hover{cursor:pointer;}
 /**/
 section.menu{z-index:1;top:0;left:0;width:100%;height:35px;background:transparent url('./blinking_cursor.gif') no-repeat calc(3px) calc(11px);box-shadow:0 0 0 0 var(--txt);}p.press{line-height:inherit;text-align:center;}p.press a{display:inline-block;width:90px;font:100%/35px inherit;text-align:center;text-transform:uppercase;white-space:nowrap;}p.press a.active{box-shadow:inset 0 -2px 0 0 whitesmoke;color:whitesmoke;}.press a:hover:not(.active){box-shadow:inset 0 -2px 0 0 whitesmoke;color:whitesmoke;}section.state{b4ckground-color:red;overflow:auto;}artgicle{text-align:justify;white-space:pre-wrap;}
 
+section.fea{max-width:720px;}section.fea p,section.fea p q{color:black;font:normal 13px/145% sans,arial;width:540px;text-align:justify;}
+
+
 section.errors{width:100vw;height:100vh;}section.errors p,p.er .e1,p.er .e2,p.er code{color:rgb(227,10,92);text-shadow:0 0 2px rgb(227,10,92);}
 p.er .e1{font:normal 175%/175% 'archive';}p.er code{font-family:'Hack','consolas',monospace;}
 
 p.e1{font:normal 135%/135% 'archive';}p.e2{font:normal 100%/135% 'archive';}p.e3{font:normal 90%/135% 'archive'}
 
 
-code{color:pink;font:normal 80% 'Roboto Mono',monospace;white-space:pre;}
-
-
-
+code{color:pink;font:normal 18px/110% 'consolas',monospace;word-wrap:break-word;white-space:pre-wrap;}
 
 
 
