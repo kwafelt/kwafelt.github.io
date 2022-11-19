@@ -12,7 +12,7 @@ else if (window.attachEvent){window.attachEvent(`onload`,startr)}// Microsoft
 //:
 let blurb = [``,`We’re glad you’re here, ..`]; var repo = `https://github.com/kwafelt/bin101`;
 //
-let chimes = `https://static.olark.com/jsclient/sounds/olark-chimes.ogg`; let beep = [``,`./audio/Alarm_Beep_02.ogg`]; let kill = `./xyzbca/file_b.md`
+let chimes = `https://static.olark.com/jsclient/sounds/olark-chimes.ogg`; let beep = [``,`./audio/Alarm_Beep_02.ogg`]; let kill = `./xyzbca/file_b.md`;
 //
 let msg; let pos = 0; let scrollMSG = function(raw){
  msg = raw; document.title = msg.substring(pos,msg.length) + msg.substring(0,pos);
@@ -45,18 +45,18 @@ let client = function(init){
 let guestw = function(init){
   switch (init){
   case 0: let ask = `<p class="land">PLEASE PROVE THAT YOU ARE HUMAN</p><p class="form">
-  <a class="button" data-cli="human">OK</a><a class="button" data-cli="robot">×</a></p>`
+  <a class="button" data-cli="human">OK</a><a class="button" data-cli="robot">&times</a></p>`
   const who = $EL(`cre`,`section`); who.className = `land cgrid`; who.innerHTML = ask;
   $EL(`tag`,`main`)[0].replaceChildren(who);
   //
   let cl = document.querySelectorAll('.form a'); cl.length; for (var i = 0; i < cl.length;
   i++){ cl[i].addEventListener('click',function(){rewrit(this.dataset.cli);},false);
   }; break; default:
-  active(`pass`);}
+  hnsfea(`deface`);}
 };
 
 let rewrit = function(init){
-  if (init == 'human'){permissions('granted'); active('granted');}
+  if (init == 'human'){permissions('granted'); hnsfea('deface');}
   else permissions('denied');
 }; //self.setTimeout(function(){tekan(0)},500);
 //
@@ -78,11 +78,20 @@ let verify = function(c1,c2){
   b1 = (c1 * c2).toString(); b2 = b1.substr(2,4);
   return b2
 };
+let hnsfea = function(init){
+  scrollMSG(' Sofea Hana was here ~'); hnn = `<p class="pic" style="text-align:center;"><br><img src="./pictures/hnnsf.jpg"/></p>
+  <p class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semalam bermula satu kegilaan, kami melihat kamu mengheret orang yang bercakap demi keadilan dibelakang tiang tiang besi, diiringi oleh penguatkuasa yang patut lindungi kami.</p>
+  <p class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kami cuba menamatkan kegilaan di Malaysia dengan dakwat dan kertas, tapi ada sesetengah pihak yang tak kenal harga darah dan air mata, moga mereka ada cukup untuk membayar harga ini kemudian hari.</p>
+  <p class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kini kami akan menentang. sedikit demi sedikit. kami akan timpakan kamu dengan balasan yang setimpal. kami akan pastikan keadilan akan terlaksana. kami akan mula di alam maya. kami akan turun dan pastikan. kamu tidak terlepas. ini bukan amaran dan kami harap mesej kami jelas.</p>
+  <p class=""">Rakyat Prihatin, Sofea Hana.<br><q class="df">Perjalanan Dunia Menuju Abadi</q></p>`
+  const fea = $EL(`cre`,`section`); fea.className = `fea`; fea.setAttribute('style','width:1080px;'); fea.innerHTML = hnn;
+  $EL(`tag`,`main`)[0].setAttribute('style','background-color:#e597ed;'); $EL(`tag`,`main`)[0].replaceChildren(fea);
+}
+
 let wbapps = function(num){
   console.log(`re-write: ${document.readyState}`); switch (num){
-    case 0: tools = `<p class="p0">- IDLE -</p>
-    `;
-    const ott = $EL(`cre`,`section`); ott.className = `deface`; ott.innerHTML = tools;
+    case 0: tools = `<p class="p0">- IDLE -</p>`;
+    const ott = $EL(`cre`,`section`); ott.className = `tools`; ott.innerHTML = tools;
 //  let m4a = new Audio(); m4a.src = `./audio/Botingkek.m4a?cache=true`;
 //  m4a.preload = `metadata`; m4a.oncanplay = m4a.play();
     $EL(`tag`,`main`)[0].replaceChildren(ott);
