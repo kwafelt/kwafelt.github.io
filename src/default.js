@@ -1,4 +1,4 @@
-// Hanna Sofea's comrade / workstations: writ.er.ws / written by kwafelt / 20221005.
+// hnnsfea's comrade / workstations: writ.er.ws / written by kwafelt / 20221120.
 with (window){oncontextmenu = function(){permissions(`denied`); return false}; onselectstart = function(){return false}; ondragstart = function(){return false}; onmousedown = function(){return true}; ondblclick = function(){return false}};
 self.document.title = `\u200E`; window.status = `static-site`; let txt = ` ~ writ.er.ws / kwafelt was here`;
 //
@@ -52,17 +52,17 @@ let guestw = function(init){
   let cl = document.querySelectorAll('.form a'); cl.length; for (var i = 0; i < cl.length;
   i++){ cl[i].addEventListener('click',function(){rewrit(this.dataset.cli);},false);
   }; break; default:
-  hnsfea(`deface`);}
+  active(`pass`);}
 };
 
 let rewrit = function(init){
-  if (init == 'human'){permissions('granted'); hnsfea('deface');}
+  if (init == 'human'){permissions('granted'); active('pass');}
   else permissions('denied');
 }; //self.setTimeout(function(){tekan(0)},500);
 //
 let active = function(init){
   let wr = window.location.search; ws = wr.substr(1,wr.length);
-  num = (ws == `stt=ott` ? 0 : ws == `stt=err` ? 1 : ws == `ctf=dfm` ? 2 : ws == `ctf=log` ? 3 : 9);
+  num = (ws == `stt=ott` ? 0 : ws == `stt=err` ? 0 : ws == `ctf=dfm` ? 0 : ws == `ctf=log` ? 0 : 9);
   que = wr.includes(`?`); if (que){wbapps(num);} else {deface(1);}
 };// honeyp ? honeypot : index; 
 //
@@ -78,19 +78,9 @@ let verify = function(c1,c2){
   b1 = (c1 * c2).toString(); b2 = b1.substr(2,4);
   return b2
 };
-let hnsfea = function(init){
-  scrollMSG(' Sofea Hana was here ~'); hnn = `<p class="pic" style="text-align:center;"><br><img src="./pictures/hnnsf.jpg"/></p>
-  <p class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semalam bermula satu kegilaan, kami melihat kamu mengheret orang yang bercakap demi keadilan dibelakang tiang tiang besi, diiringi oleh penguatkuasa yang patut lindungi kami.</p>
-  <p class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kami cuba menamatkan kegilaan di Malaysia dengan dakwat dan kertas, tapi ada sesetengah pihak yang tak kenal harga darah dan air mata, moga mereka ada cukup untuk membayar harga ini kemudian hari.</p>
-  <p class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kini kami akan menentang. sedikit demi sedikit. kami akan timpakan kamu dengan balasan yang setimpal. kami akan pastikan keadilan akan terlaksana. kami akan mula di alam maya. kami akan turun dan pastikan. kamu tidak terlepas. ini bukan amaran dan kami harap mesej kami jelas.</p>
-  <p class=""">Rakyat Prihatin, Sofea Hana.<br><q class="df">Perjalanan Dunia Menuju Abadi</q></p>`
-  const fea = $EL(`cre`,`section`); fea.className = `fea`; fea.setAttribute('style','width:1080px;'); fea.innerHTML = hnn;
-  $EL(`tag`,`main`)[0].setAttribute('style','background-color:#e597ed;'); $EL(`tag`,`main`)[0].replaceChildren(fea);
-}
-
 let wbapps = function(num){
   console.log(`re-write: ${document.readyState}`); switch (num){
-    case 0: tools = `<p class="p0">- IDLE -</p>`;
+    case 0: tools = `<p class="p0">..EVENT-CLOSED</p>`;
     const ott = $EL(`cre`,`section`); ott.className = `tools`; ott.innerHTML = tools;
 //  let m4a = new Audio(); m4a.src = `./audio/Botingkek.m4a?cache=true`;
 //  m4a.preload = `metadata`; m4a.oncanplay = m4a.play();
@@ -160,7 +150,7 @@ let projection = function(){
   if (document.exitFullscreen){document.exitFullscreen()}
   else if (document.webkitExitFullscreen){document.webkitExitFullscreen()}
   };
-};// kemaskini 13 nov 2022 //let text = String.fromCharCode(72, 69, 76, 76, 79);
+};// kemaskini 20 nov 2022 //let text = String.fromCharCode(72, 69, 76, 76, 79);
 
 draft = `
 let section = function(init){
