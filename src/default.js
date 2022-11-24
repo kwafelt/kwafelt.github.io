@@ -2,8 +2,9 @@
 with (window){oncontextmenu = function(){permissions(`denied`); return false}; onselectstart = function(){return false}; ondragstart = function(){return false}; onmousedown = function(){return true}; ondblclick = function(){return false}};
 self.document.title = `\u200E`; window.status = `static-site`; let txt = ` ~ writ.er.ws / kwafelt was here`;
 //
-let origin = self.location.origin; let protocol = self.location.protocol; let hostnm = self.location.hostname; let pathnm = self.location.pathname;
-let startr = function(){console.log(`dataset:${hostnm}${pathnm}?payload=success`); self.setTimeout(function(){client(0)},100);};
+let origin = self.location.origin; let hostnm = self.location.hostname;
+let portnm = (self.location.port === `` ? `` : `:${self.location.port}`); let pathnm = self.location.pathname;
+let startr = function(){console.log(`stack:${hostnm}${portnm}${pathnm}?payload=success`); self.setTimeout(function(){client(0)},100);};
 //
 let library = [`625:781`,`738:740`,`740:741`,`631:846`,`640:771`,`725:760`,`668:482`,`627:629`,`690:699`,`746:801`,`750:885`,`545:658`,`686:826`,`678:874`,`726:855`]
 
@@ -22,19 +23,37 @@ let msg; let pos = 0; let scrollMSG = function(raw){
 let $EL = function(c,e){ return (c == `cre` ? document.createElement(e) : c == 'cls' ? document.getElementsByClassName(e) : c == 'get' ? document.getElementById(e) : c == 'tag' ? document.getElementsByTagName(e) : c == 'que' ? document.querySelectorAll(e) : alert(c + e))};
 //
 let permissions = function(state){// state : 'granted' || 'prompt' || 'denied'
- let txt; txt = state == `granted` ? `Access Granted` : `Access Denied`; let sid; sid = state == `granted` ? `gran` : `deni`;
- let ogg = new Audio(); ogg.src = beep[1]; ogg.preload = 'metadata'; ogg.oncanplay = ogg.play();
- let prm = $EL('cre','p'); prm.className = 'prm'; prm.setAttribute('id', sid);
- prm.textContent = txt; document.body.appendChild(prm); setTimeout(function(){removeElement(prm.id)},1000)
+  let txt = state == `granted` ? `Access Granted` : `Access Denied`; let sid = state == `granted` ? `gran` : `deni`;
+//let ogg = new Audio(); ogg.src = beep[1]; ogg.preload = `metadata`; ogg.oncanplay = ogg.play();
+  let prm = $EL(`cre`,`p`); prm.className = `prm`; prm.setAttribute(`id`, sid);
+  prm.textContent = txt; document.body.appendChild(prm); setTimeout(function(){removeElement(prm.id)},1000)
 }; let removeElement = function(DELete){let DEL = $EL('get',DELete); DEL.remove();}// P A U S E : result
+//
+let proccd = function(init, callb){
+  if (init == `pass`){permissions(`granted`); callb(init);}
+  else {permissions(`denied`); void(0);}
+}
+//
+let protcl = function(init){
+  let ptc = `<article class=""><h1>The connection to ${hostnm} is not secure</h1><p>You are seeing this warning because this site does not support HTTPS.</p>
+  <p class="click"><a class="secondary-button" id="proceed-button" href="javascript:guestw(0);">Continue to site</a>
+  <a id="primary-button">Go back</a></p></article>`
+  const pro = $EL(`cre`,`section`); pro.className = `cgrid smoke`; pro.innerHTML = ptc; if (self.location.protocol !== `https`){
+  $EL(`tag`,`main`)[0].replaceChildren(pro);} else {alert(`OK`)}
+};
+//
+let rewrit = function(init){
+  if (init == 'human'){permissions('granted'); active('pass');}
+  else permissions('denied');
+}; //self.setTimeout(function(){tekan(0)},500);
 //
 let client = function(init){
 //let milliseconds = new Date().getTime(); let unix = Math.round(+new Date()/1000);
   let UNIQUE = Math.round(+new Date().getTime()/1000);
-  let timestamp = localStorage.getItem(`timestamp`); if (timestamp === null){
-    localStorage.setItem(`timestamp`,`${UNIQUE}`); guestw(0);} else {
+  let timestamp = localStorage.getItem(`EVENT`); if (timestamp === null){
+    localStorage.setItem(`EVENT`,`${UNIQUE}`); guestw(0);} else {
     if ((UNIQUE - timestamp) < 86400){ guestw(1);} else {
-    localStorage.removeItem(`timestamp`); window.location.reload(true);// HARD-RELOAD-FROM-SERVER
+    localStorage.removeItem(`EVENT`); window.location.reload(true);// HARD-RELOAD-FROM-SERVER
     }
     // var countDownDate = Math.round(+new Date("Nov 17, 2022").getTime()/1000);
     // var countDownDat2 = Math.round(+new Date("Nov 18, 2022").getTime()/1000);
@@ -54,29 +73,23 @@ let guestw = function(init){
   }; break; default:
   active(`pass`);}
 };
-
-let rewrit = function(init){
-  if (init == 'human'){permissions('granted'); active('pass');}
-  else permissions('denied');
-}; //self.setTimeout(function(){tekan(0)},500);
 //
 let active = function(init){
   let wr = window.location.search; ws = wr.substr(1,wr.length);
-  num = (ws == `stt=ott` ? 0 : ws == `stt=err` ? 0 : ws == `ctf=dfm` ? 0 : ws == `ctf=log` ? 0 : 9);
+  num = (ws == `stt=ott` ? 0 : ws == `stt=err` ? 1 : ws == `ctf=dfm` ? 2 : ws == `ctf=log` ? 3 : 9);
   que = wr.includes(`?`); if (que){wbapps(num);} else {deface(1);}
 };// honeyp ? honeypot : index; 
 //
 let deface = function(init){
   co = `<p class="p0">hnnsfea’s comrade</p><p class="p1">Locked out of server / kwafelt was here</p>`
   const def = $EL(`cre`,`section`); def.className = `deface`; def.innerHTML = co; console.log(`3_3nd1ng5}`);
-  if (init == 1){
+  if (init == 18){
     let m4a = new Audio(); m4a.src = `./audio/Botingkek.m4a?cache=true`;
     m4a.preload = `metadata`; m4a.oncanplay = m4a.play();}
   $EL(`tag`,`main`)[0].replaceChildren(def);
 };
 let verify = function(c1,c2){
-  b1 = (c1 * c2).toString(); b2 = b1.substr(2,4);
-  return b2
+  return (c1 * c2).toString().substr(2,4);
 };
 let wbapps = function(num){
   console.log(`re-write: ${document.readyState}`); switch (num){
@@ -114,8 +127,7 @@ let wbapps = function(num){
 };
 //
 let base64 = function(b64,str){
-  let data = (b64 == 'enc' ? btoa(str) : b64 == 'dec' ? atob(str) : '-e-r-r-o-r-s-');
-  return data;
+  return (b64 == 'enc' ? btoa(str) : b64 == 'dec' ? atob(str) : '-e-r-r-o-r-s-');
 };
 //
 let menu = function(init){// masukkan onclick dalam menu
