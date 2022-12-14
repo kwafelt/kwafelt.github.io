@@ -26,7 +26,7 @@ let ORIG = getCookie(`\u200E`); let RECO = bssix4(`dec`,ORIG); setCookie(`\u200E
 
 let ngap = function(init){
   key = bssix4(`enc`,init); k3y = getCookie(`\u200E`);
-  if (key == k3y){ feedxt(honeypot,custom);} else { permissions(honeypot);}
+  if (key == k3y){ window.status = verify(init); feedxt(honeypot,custom);} else { permissions(honeypot);}
 }
 
 let biskut = function(init){
