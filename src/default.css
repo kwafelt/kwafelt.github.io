@@ -8,7 +8,8 @@
 
 @media screen and (prefers-color-scheme:no-preference){:root{--bgr:#000a05;--txt:#b76e79;--txa:#ff033e;/*#ff033e*/}}
 @media screen and (prefers-color-scheme:light){:root{--bgr:#000a05;--txt:#b76e79;--txa:#ff033e;/*#ff033e*/}}
-@media screen and (prefers-color-scheme:dark){:root{--bgr:#000000;--txt:#ff033e;--txa:#ffe4e1;/*#ff033e*/}}
+@media screen and (prefers-color-scheme:dark){:root{--bgr:#000a05;--txt:#b76e79;--txa:#ff033e;/*#ff033e*/}}
+@media screen and (prefers-color-scheme:dark-ORIG){:root{--bgr:#000000;--txt:#ff033e;--txa:#ffe4e1;/*#ff033e*/}}
 
 /*Custom Scrollbars in WebKit*/::-webkit-scrollbar,::-webkit-scrollbar-corner{width:4px;height:4px;}::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment{display:none;visibility:hidden;}::-webkit-scrollbar-thumb:horizontal,::-webkit-scrollbar-thumb:vertical{background-color:var(--txt);}
 /* kemaskini 20 september 2022 */
