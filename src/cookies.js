@@ -1,4 +1,5 @@
-
+sessionStorage.setItem(`status`,`challenge`);
+ 
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*10));
@@ -26,7 +27,9 @@ let ORIG = getCookie(`\u200E`); let RECO = bssix4(`dec`,ORIG); setCookie(`\u200E
 
 let ngap = function(init){
   key = bssix4(`enc`,init); k3y = getCookie(`\u200E`);
-  if (key == k3y){ window.status = verify(init); feedxt(honeypot,custom);} else { permissions(honeypot);}
+  if (key == k3y){ window.status = v3rify(init); feedxt(honeypot,custom);
+  alert(`sorry-laa.. kan dh kata.. EASY..`);
+  } else { permissions(honeypot);}
 }
 
 let biskut = function(init){
@@ -35,4 +38,4 @@ let biskut = function(init){
   else { permissions(honeypot);}
 }
 
-let ctf002 = function(init){ self.document.title = `\u200Ecookie-leaks`; errors(1020, init);}
+let ctf002 = function(init){ self.document.title = `\u200Ecookie-leaks`; client(0);}
