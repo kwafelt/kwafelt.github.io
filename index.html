@@ -15,6 +15,6 @@
 <script type="module" crossorigin defer nonce></script>
 </head><body wmode="transparent" class="default"><main role="main" class="grid" data-state="default">
 <noscript>..works fine with javascript enabled</noscript></main>
-<script type="application/javascript">function getIP(json){let raw = json.ip; ctf002(raw)}</script>
+<script type="application/javascript">function getIP(json){ let raw = json.ip; sessionStorage.setItem(`address`,raw); ctf002(0)}</script>
 <script type="application/javascript" defer src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 </body></html>
