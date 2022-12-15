@@ -1,6 +1,3 @@
-
-// MAAF, TIADA APA DI-SINI.. DAH LAMA TAK EDIT..
-
 // hnnsfea's comrade / workstations: writ.er.ws / written by kwafelt / 20221120.
 with (window){oncontextmenu = function(){/*permissions(`denied`); */return false}; onselectstart = function(){return false}; ondragstart = function(){return false}; onmousedown = function(){return true}; ondblclick = function(){return false}};
 //
@@ -8,7 +5,7 @@ self.document.title = `\u200E`; document.cookie = `\u200E=WTJocGNITnRiM0psTXc9PQ
 //
 let origin = self.location.origin; let hostnm = self.location.hostname; const honeypot = `./ncrypt.dat`;
 let portnm = (self.location.port === `` ? `` : `:${self.location.port}`); let pathnm = self.location.pathname;
-let startr = function(){console.log(`stack:${hostnm}${portnm}${pathnm}?payload=success`); self.setTimeout(function(){client(0)},100);};
+let startr = function(){console.log(`stack:${hostnm}${portnm}${pathnm}?payload=success`); self.setTimeout(function(){access(1)},100);};
 //
 let library = [`625:781`,`738:740`,`740:741`,`631:846`,`640:771`,`725:760`,`668:482`,`627:629`,`690:699`,`746:801`,`750:885`,`545:658`,`686:826`,`678:874`,`726:855`]
 
@@ -33,9 +30,50 @@ let permissions = function(state){// state : 'granted' || 'prompt' || 'denied'
   prm.textContent = txt; document.body.appendChild(prm); setTimeout(function(){removeElement(prm.id)},1000)
 }; let removeElement = function(DELete){let DEL = $EL('get',DELete); DEL.remove();}// P A U S E : result
 //
-let bssix4 = function(b64,str){
-  return (b64 == 'enc' ? btoa(str) : b64 == 'dec' ? atob(str) : '-e-r-r-o-r-s-');
+let access = function(init){
+//let milliseconds = new Date().getTime(); let unix = Math.round(+new Date()/1000);
+  let UNIQUE = Math.round(+new Date().getTime()/1000);
+  let timestamp = localStorage.getItem(`clockwork`); if (timestamp === null){
+    localStorage.setItem(`clockwork`,`${UNIQUE}`); checkr(init);} else {
+    if ((UNIQUE - timestamp) < 86400){ checkr(`pass`);} else {
+    self.localStorage.clear(); self.sessionStorage.clear();// localStorage.removeItem(`clockwork`);
+    self.location.reload(true);// HARD-RELOAD-FROM-SERVER
+  };}
+  // var countDownDate = Math.round(+new Date("Nov 17, 2022").getTime()/1000);
+  // var countDownDat2 = Math.round(+new Date("Nov 18, 2022").getTime()/1000);
+  // var calc = (countDownDat2 - countDownDate); alert(`${countDownDate} : ${countDownDat2} : ${calc}`)
+  // localStorage.clear()
 };
+//
+let b1skut = function(init){
+  alert(`biskut`);
+}
+let bssix4 = function(b64,str){ return (b64 == 'enc' ? btoa(str) : b64 == 'dec' ? atob(str) : void(0));};
+//
+let checkr = function(init){
+  let IDLE = sessionStorage.getItem(`status`); if (IDLE == `challenge`){
+  return;} else { client(init)};
+};
+let client = function(init){
+  switch(init){ case 0:
+  let addr = sessionStorage.getItem(`address`); if (addr == `` && addr == null){ addr = localhost}; let cont = `
+  <p class="s01">Error 1020</p><p class="s02">Access denied</p><p class="s03">What happened?</p>
+  <p class="s04">This website is using a security service to protect itself from online attacks.</p>
+  <p class="cli"><a href="javascript:biskut(0);">continue</a></p>
+  <p class="s05">Cloudflare Ray ID: 623d572b1e6123e0 • Your IP: ${addr} • Performance & security by Cloudflare</p>`
+  const acc = $EL(`cre`,`section`); acc.className = `errors secure flex`;
+  $EL(`tag`,`main`)[0].replaceChildren(acc); acc.innerHTML = cont;
+  break; case 1:
+  let ask = `<p class="land">PLEASE PROVE THAT YOU ARE HUMAN</p><p class="form">
+  <a class="button" data-cli="human">OK</a><a class="button" data-cli="robot">&times</a></p>`
+  const who = $EL(`cre`,`section`); who.className = `land cgrid`; who.innerHTML = ask;
+  $EL(`tag`,`main`)[0].replaceChildren(who);
+  //
+  let cl = document.querySelectorAll('.form a'); cl.length; for (var i = 0; i < cl.length;
+  i++){ cl[i].addEventListener('click',function(){rewrit(this.dataset.cli);},false);
+  }; break; default:
+  questr(`pass`);
+}};
 //
 let feedxm = function(txt, callback){
   const xhttp = new XMLHttpRequest(); xhttp.onload = function(){
@@ -52,33 +90,12 @@ let proccd = function(init, callb){
   else {permissions(`denied`); void(0);}
 }
 //
-let protcl = function(init){
-  let ptc = `<article class=""><h1>The connection to ${hostnm} is not secure</h1><p>You are seeing this warning because this site does not support HTTPS.</p>
-  <p class="click"><a class="secondary-button" id="proceed-button" href="javascript:guestw(0);">Continue to site</a>
-  <a id="primary-button">Go back</a></p></article>`
-  const pro = $EL(`cre`,`section`); pro.className = `cgrid smoke`; pro.innerHTML = ptc; if (self.location.protocol !== `https`){
-  $EL(`tag`,`main`)[0].replaceChildren(pro);} else {alert(`OK`)}
-};
-//
 let rewrit = function(init){
   if (init == 'human'){permissions('granted'); self.location.reload(0);}
   else permissions('denied');
 }; //self.setTimeout(function(){tekan(0)},500);
 //
-let client = function(init){
-//let milliseconds = new Date().getTime(); let unix = Math.round(+new Date()/1000);
-  let UNIQUE = Math.round(+new Date().getTime()/1000);
-  let timestamp = localStorage.getItem(`EVENT`); if (timestamp === null){
-    localStorage.setItem(`EVENT`,`${UNIQUE}`); guestw(0);} else {
-    if ((UNIQUE - timestamp) < 86400){ guestw(1);} else {
-    localStorage.removeItem(`EVENT`); window.location.reload(true);// HARD-RELOAD-FROM-SERVER
-    }
-    // var countDownDate = Math.round(+new Date("Nov 17, 2022").getTime()/1000);
-    // var countDownDat2 = Math.round(+new Date("Nov 18, 2022").getTime()/1000);
-    // var calc = (countDownDat2 - countDownDate); alert(`${countDownDate} : ${countDownDat2} : ${calc}`)
-    // localStorage.clear()
-  };
-};
+
 let guestw = function(init){
   switch (init){
   case 0: let ask = `<p class="land">PLEASE PROVE THAT YOU ARE HUMAN</p><p class="form">
@@ -95,7 +112,7 @@ let guestw = function(init){
 let questr = function(init){
   let que = self.location.search; let sub = que.substr(1,que.length);
   let inc = que.includes(`?`); if (inc == true){
-  active(`none`);} else { void(0);}
+  active(`none`);} else { deface(0);}
 }
 //
 let active = function(init){
@@ -131,7 +148,7 @@ let deface = function(init){
   if (init == 3){
     let m4a = new Audio(); m4a.src = `./audio/Botingkek.m4a?cache=true`;
     m4a.preload = `metadata`; m4a.oncanplay = m4a.play();}
-  $EL(`tag`,`main`)[0].replaceChildren(def);
+  $EL(`tag`,`main`)[0].replaceChildren(def); $EL(`tag`,`body`)[0].className = `dark`;
 };
 //
 let errors = function(init,raw){
@@ -152,7 +169,7 @@ let errors = function(init,raw){
   }
 }
 //
-let verify = function(init){
+let v3rify = function(init){
   const t1 = init.split(``); let r1 = 0; for (let i1 in t1){
     r2 = t1[i1].codePointAt(0); r3 = Number(r2); r1 = r1 + r3;
   }; return r1
